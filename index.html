@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecursionViz - Visualización de Recursión</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <h1>RecursionViz</h1>
+        <section class="explanation">
+            <h2>¿Qué es la Recursión?</h2>
+            <p>La recursión es una técnica de programación donde una función se llama a sí misma para resolver un problema. Es como una muñeca rusa: cada muñeca contiene una versión más pequeña de sí misma hasta llegar a la más pequeña.</p>
+            <p>Veamos un ejemplo con la función factorial:</p>
+            <code class="code-example">
+factorial(n) {
+    if (n <= 1) return 1;
+    return n * factorial(n - 1);
+}
+            </code>
+        </section>
+
+        <section class="interactive">
+            <div class="input-section">
+                <label for="number">Ingresa un número (1-10):</label>
+                <input type="number" id="number" min="1" max="10" value="5">
+                <button id="visualize">Visualizar Factorial</button>
+            </div>
+
+            <div class="visualization">
+                <div class="stack-container">
+                    <h3>Pila de Llamadas</h3>
+                    <div id="stack" class="stack"></div>
+                </div>
+                <div class="result-container">
+                    <h3>Resultado</h3>
+                    <div id="result" class="result"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
